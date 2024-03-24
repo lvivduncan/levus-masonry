@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font: 20px / 1.8 "Roboto", Arial, sans-serif;
 }
 
 .wrapper
@@ -11,12 +12,88 @@
     margin: 100px auto 0;
 }
 
-.levus-heading
+@media(max-width:1000px)
 {
+    .wrapper 
+    {
+        width: 95%;
+    }
+}
 
+.levus-header
+{
+    margin: 0 0 20px;
+    border-bottom: 1px solid maroon;
+}
+
+.levus-header ul
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.levus-header li 
+{
+    display: block;
+    cursor: pointer;
+    padding: 10px 20px;
 }
 
 .levus-main
 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
+.levus-main div
+{
+    padding: 20px;
+    border: 1px solid rgb(50, 75, 13);
+    transition: .5s;
+}
+
+.show
+{
+    animation: show 3s;
+    display: block;
+}
+
+.hidden
+{
+    animation: hidden 3s;
+    display: none;
+}
+
+@keyframes show
+{
+    0% 
+    {
+        opacity: 0;
+    }
+    50% 
+    {
+        opacity: 1;
+    }
+    100% 
+    {
+        display: block;
+    }
+}
+
+@keyframes hidden
+{
+    0% 
+    {
+        opacity: 1;
+    }
+    50% 
+    {
+        opacity: 0;
+    }
+    100% 
+    {
+        display: none;
+    }
 }
